@@ -1,0 +1,28 @@
+@use 'sass:color';
+@use '../../../styles/variables' as *;
+
+.cButton {
+  height: 36px;
+  border-radius: 4px;
+  font-family: $font-primary;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; // Spacing between icon and text
+
+  // Default hover effect for all buttons to ensure consistency
+  transition: all 0.3s ease-in-out;
+
+  &.query {
+    background-color: $query-button-color;
+    border-color: $query-button-color;
+    color: #fff;
+    font-weight: 500;
+
+    &:hover, &:focus {
+      background-color: color.adjust($query-button-color, $lightness: 10%);
+      border-color: color.adjust($query-button-color, $lightness: 10%);
+      color: #fff;
+    }
+  }
+}

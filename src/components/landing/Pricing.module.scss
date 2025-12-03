@@ -1,0 +1,113 @@
+@use '../../styles/variables' as *;
+
+.pricing {
+  padding: 6rem 2rem;
+  background: #f0f9ff;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $text-light-primary;
+      margin-bottom: 1rem;
+
+      span {
+        background: linear-gradient(135deg, $primary-blue, $primary-hover);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: $text-light-secondary;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pricingCard {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &.popular {
+      border: 2px solid $primary-blue;
+      transform: scale(1.05);
+      
+      &::before {
+        content: 'Popular';
+        position: absolute;
+        top: 20px;
+        right: -35px;
+        background: $primary-blue;
+        color: white;
+        padding: 0.25rem 3rem;
+        transform: rotate(45deg);
+        font-size: 0.875rem;
+        font-weight: 600;
+      }
+    }
+
+    .planName {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $text-light-primary;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-size: 3rem;
+      font-weight: 700;
+      color: $primary-blue;
+      margin-bottom: 0.5rem;
+
+      span {
+        font-size: 1.125rem;
+        color: $text-light-secondary;
+        font-weight: 400;
+      }
+    }
+
+    .description {
+      color: $text-light-secondary;
+      margin-bottom: 2rem;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem 0;
+
+      li {
+        padding: 0.75rem 0;
+        color: $text-light-secondary;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use '../../../styles/variables' as *;
+
+.cCard {
+  background: var(--bg-card, #18191a);
+  border-radius: 4px;
+  padding: $padding-container;
+  box-shadow: $card-shadow;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: rgba($primary-blue, 0.3);
+  }
+
+  &.elevated {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  &.bordered {
+    border: 1px solid rgba($primary-blue, 0.2);
+  }
+
+  &.centered {
+    text-align: center;
+  }
+}

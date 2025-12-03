@@ -1,0 +1,91 @@
+@use '../../styles/variables' as *;
+
+.services {
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $text-light-primary;
+      margin-bottom: 1rem;
+
+      span {
+        background: linear-gradient(135deg, $primary-blue, $primary-hover);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: $text-light-secondary;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .serviceCard {
+    padding: 2rem;
+
+    .icon {
+      font-size: 3rem;
+      color: $primary-blue;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $text-light-primary;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $text-light-secondary;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 0.5rem 0;
+        color: $text-light-secondary;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &::before {
+          content: '✓';
+          color: $success-color;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
