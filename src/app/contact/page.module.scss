@@ -186,16 +186,16 @@
   }
 
   .infoCard {
-    padding: 1.25rem; // Padding vừa phải (20px)
+    padding: 1.25rem;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     text-align: left;
-    gap: 1.25rem; // Tăng khoảng cách giữa icon và text
+    gap: 1.25rem;
     transition: all 0.3s ease;
-    border-radius: 12px; // Bo góc mềm mại hơn
-    min-height: auto;
-    border: 1px solid transparent; // Chuẩn bị cho hover
+    border-radius: 12px;
+    height: 100%; // Fill wrapper height
+    border: 1px solid transparent;
 
     &:hover {
       transform: translateY(-4px);

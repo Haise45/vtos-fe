@@ -99,7 +99,11 @@ const Services: React.FC = () => {
         </AnimatedSection>
         <div className={styles.grid}>
           {services.map((service, index) => (
-            <AnimatedSection key={index} delay={`delay-${(index + 1) * 100}`}>
+            <AnimatedSection
+              key={index}
+              delay={`delay-${(index + 1) * 100}`}
+              className="h-full"
+            >
               <Ccard className={styles.serviceCard} elevated>
                 <div className={styles.icon}>{service.icon}</div>
                 <h3>{service.title}</h3>

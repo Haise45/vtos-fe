@@ -56,8 +56,11 @@ const Header: React.FC = () => {
 
         <nav className={styles.nav}>
           <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
+          <Link href="/products">Products</Link>
           <Link href="/solutions">Solutions</Link>
+          <Link href="/resources">Resources</Link>
+          <Link href="/about">About</Link>
+          <Link href="/careers">Careers</Link>
           <Link href="/contact">Contact</Link>
         </nav>
 
@@ -80,11 +83,20 @@ const Header: React.FC = () => {
           <Link href="/" onClick={() => setMobileMenuOpen(false)}>
             Home
           </Link>
-          <Link href="/about" onClick={() => setMobileMenuOpen(false)}>
-            About
+          <Link href="/products" onClick={() => setMobileMenuOpen(false)}>
+            Products
           </Link>
           <Link href="/solutions" onClick={() => setMobileMenuOpen(false)}>
             Solutions
+          </Link>
+          <Link href="/resources" onClick={() => setMobileMenuOpen(false)}>
+            Resources
+          </Link>
+          <Link href="/about" onClick={() => setMobileMenuOpen(false)}>
+            About
+          </Link>
+          <Link href="/careers" onClick={() => setMobileMenuOpen(false)}>
+            Careers
           </Link>
           <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
             Contact

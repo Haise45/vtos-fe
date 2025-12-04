@@ -85,7 +85,11 @@ const Pricing: React.FC = () => {
         </AnimatedSection>
         <div className={styles.grid}>
           {plans.map((plan, index) => (
-            <AnimatedSection key={index} delay={`delay-${(index + 1) * 100}`}>
+            <AnimatedSection
+              key={index}
+              delay={`delay-${(index + 1) * 100}`}
+              className="h-full"
+            >
               <Ccard
                 className={`${styles.pricingCard} ${
                   plan.popular ? styles.popular : ""
