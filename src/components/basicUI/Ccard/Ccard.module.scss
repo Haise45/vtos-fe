@@ -25,4 +25,16 @@
   &.centered {
     text-align: center;
   }
+
+  &.compact {
+    :global(.ant-card-body) {
+      padding: 12px; // Giảm padding xuống
+    }
+  }
+
+  &.noPadding {
+    :global(.ant-card-body) {
+      padding: 0;
+    }
+  }
 }

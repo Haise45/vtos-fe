@@ -1,0 +1,310 @@
+@use '../../styles/variables' as *;
+
+.contact {
+  padding-top: 100px;
+  min-height: 100vh;
+
+  .hero {
+    background: linear-gradient(135deg, $primary-blue 0%, $primary-hover 100%);
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.3;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+
+      @media (max-width: 768px) {
+        font-size: 2.25rem;
+      }
+    }
+
+    p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.95;
+      position: relative;
+      z-index: 1;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .section {
+    padding: 5rem 2rem;
+    background: #ffffff;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+
+  .contactGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+
+    @media (max-width: 968px) {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+  }
+
+  .formSection {
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $text-light-primary;
+      margin-bottom: 0.75rem;
+
+      span {
+        background: linear-gradient(135deg, $primary-blue, $primary-hover);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    p {
+      color: $text-light-secondary;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .formRow {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .formGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      label {
+        font-weight: 500;
+        color: $text-light-primary;
+        font-size: 0.95rem;
+      }
+
+      input,
+      textarea {
+        padding: 0.875rem 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        font-size: 1rem;
+        font-family: $font-primary;
+        transition: all 0.3s ease;
+        background: white;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-blue;
+          box-shadow: 0 0 0 3px rgba($primary-blue, 0.1);
+        }
+
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      textarea {
+        min-height: 150px;
+        resize: vertical;
+      }
+    }
+  }
+
+  .infoSection {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $text-light-primary;
+      margin-bottom: 0.75rem;
+
+      span {
+        background: linear-gradient(135deg, $primary-blue, $primary-hover);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .subtitle {
+      color: $text-light-secondary;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .infoCards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      flex: 1;
+
+      @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .infoCard {
+    padding: 1.25rem; // Padding vừa phải (20px)
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.25rem; // Tăng khoảng cách giữa icon và text
+    transition: all 0.3s ease;
+    border-radius: 12px; // Bo góc mềm mại hơn
+    min-height: auto;
+    border: 1px solid transparent; // Chuẩn bị cho hover
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      border-color: rgba($primary-blue, 0.1);
+    }
+
+    .icon {
+      font-size: 1.25rem;
+      color: $primary-blue;
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba($primary-blue, 0.08);
+      border-radius: 50%; // Đổi sang hình tròn
+      transition: all 0.3s ease;
+    }
+
+    &:hover .icon {
+      background: $primary-blue;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .content {
+      flex: 1;
+      padding-top: 2px; // Căn chỉnh nhẹ với icon
+      
+      h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: $text-light-primary;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.01em;
+      }
+
+      p {
+        color: $text-light-secondary;
+        line-height: 1.6;
+        margin: 0;
+        font-size: 0.95rem;
+        word-break: break-word;
+
+        a {
+          color: $text-light-secondary; // Màu mặc định nhẹ nhàng hơn
+          text-decoration: none;
+          transition: color 0.2s ease;
+          font-weight: 500;
+          display: block;
+          margin-bottom: 2px;
+
+          &:hover {
+            color: $primary-blue; // Hover mới hiện màu xanh
+          }
+        }
+      }
+    }
+  }
+
+  .mapSection {
+    margin-top: 5rem;
+    padding: 0 2rem 5rem;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $text-light-primary;
+      margin-bottom: 0.75rem;
+      text-align: center;
+
+      span {
+        background: linear-gradient(135deg, $primary-blue, $primary-hover);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .subtitle {
+      text-align: center;
+      color: $text-light-secondary;
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+
+    .map {
+      border-radius: 12px;
+      overflow: hidden;
+      height: 400px;
+      background: linear-gradient(135deg, #f0f2f5 0%, #e0e2e5 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $text-light-secondary;
+      font-size: 1rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+
+      @media (max-width: 768px) {
+        height: 300px;
+      }
+    }
+  }
+}
