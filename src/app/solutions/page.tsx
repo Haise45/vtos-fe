@@ -141,7 +141,7 @@ export default function SolutionsPage() {
             {solutions.map((solution, index) => (
               <AnimatedSection
                 key={index}
-                className={styles.solutionCardWrapper}
+                className={`${styles.solutionCardWrapper} h-full`}
                 delay={`delay-${((index % 2) + 1) * 100}`}
               >
                 <Ccard className={styles.solutionCard} elevated>
@@ -180,7 +180,7 @@ export default function SolutionsPage() {
             {industries.map((industry, index) => (
               <AnimatedSection
                 key={index}
-                className={styles.industryCardWrapper}
+                className={`${styles.industryCardWrapper} h-full`}
                 delay={`delay-${(index + 1) * 100}`}
               >
                 <Ccard className={styles.industryCard} elevated>

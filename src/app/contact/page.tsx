@@ -176,7 +176,7 @@ export default function ContactPage() {
               <div className={styles.infoCards}>
                 <AnimatedSection
                   delay="delay-300"
-                  className={styles.infoCardWrapper}
+                  className={`${styles.infoCardWrapper} h-full`}
                 >
                   <Ccard className={styles.infoCard} elevated>
                     <div className={styles.icon}>
@@ -194,7 +194,7 @@ export default function ContactPage() {
 
                 <AnimatedSection
                   delay="delay-400"
-                  className={styles.infoCardWrapper}
+                  className={`${styles.infoCardWrapper} h-full`}
                 >
                   <Ccard className={styles.infoCard} elevated>
                     <div className={styles.icon}>
@@ -213,7 +213,7 @@ export default function ContactPage() {
 
                 <AnimatedSection
                   delay="delay-500"
-                  className={styles.infoCardWrapper}
+                  className={`${styles.infoCardWrapper} h-full`}
                 >
                   <Ccard className={styles.infoCard} elevated>
                     <div className={styles.icon}>
@@ -234,7 +234,7 @@ export default function ContactPage() {
 
                 <AnimatedSection
                   delay="delay-600"
-                  className={styles.infoCardWrapper}
+                  className={`${styles.infoCardWrapper} h-full`}
                 >
                   <Ccard className={styles.infoCard} elevated>
                     <div className={styles.icon}>
